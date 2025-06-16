@@ -1,0 +1,118 @@
+/*
+    This file contains styling for all the map pages
+*/
+
+.section {
+    margin: 50px 10% 50px 10%;;
+}
+
+.slideshow {
+    display: grid;
+    grid-template-rows: 100% 20px;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.slideshow .slide-button {
+    justify-self: center;
+    align-self: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border-width: 0;
+    font-weight: 500;
+    font-size: x-large;
+    color: white;
+    background-color: #B0CAD0;
+}
+
+.slideshow .slide-button:hover {
+    background-color: #81a3ab;
+}
+
+.slideshow .slide-button:active {
+    background-color: #759FA8;
+}
+
+.slideshow .slide-button.left {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.slideshow .slide-button.right {
+    grid-row: 1;
+    grid-column: 3;
+}
+
+.slideshow .slide-title {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: center;
+    z-index: 1;
+    color: white;
+}
+
+.slideshow .slide-image {
+    grid-row: 1;
+    grid-column: 2;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slideshow .slide-video {
+    grid-row: 1;
+    grid-column: 2;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slideshow .index-container {
+    grid-row: 2;
+    grid-column: 2;
+    width: 50%;
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+}
+
+.slideshow .index-container .index {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #B0CAD0;
+}
+
+.slideshow .index-container .index.active {
+    background-color: #759FA8;
+}
+
+.tabs {
+    justify-self: center;
+    margin: 10px;
+    max-width: 80%;
+}
+
+.tab-content {
+    justify-self: center;
+    margin: 10px;
+    max-width: 80%;
+}
+
+.tab-button {
+    margin: 5px;
+    height: 30px;
+    min-width: 40px;
+    border-width: 0;
+    border-radius: 8px;
+    color: white;
+    background-color: #B0CAD0;
+}
+
+.tab-button:hover {
+    background-color: #81a3ab;
+}
+
+.tab-button.active {
+    background-color: #759FA8;
+}

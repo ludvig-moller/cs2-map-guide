@@ -1,0 +1,43 @@
+/*
+    This file contains styling for the home page
+*/
+
+.maps .map-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-gap: 50px;
+    margin: 25px;
+}
+
+@media only screen and (max-width: 750px) {
+    .maps .map-container {
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+    }
+}
+
+.maps .map-container .card {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.maps .map-container .card .title {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.maps .map-container .card .image {
+    transition: transform .5s;
+}
+
+.maps .map-container .card:hover .image {
+    transform: scale(1.3);
+}
