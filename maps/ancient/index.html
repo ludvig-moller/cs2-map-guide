@@ -18,216 +18,223 @@
         <a class="title" href="/cs2-map-guide/">CS2 Map Guide</a>
         <h1 class="title">Ancient</h1>
     </header>
-    <!-- Section for overview of the map -->
-    <section class="section">
-        <h2 class="title">Overview</h2>
-        <!-- Div for the slideshow used by script slideshow.js linked at bottom of body-->
-        <div class="slideshow">
-            <!-- Buttons for navigation between slides -->
-            <button class="slide-button left" onclick="changeSlide(-1, this.parentElement)"><</button>
-            <button class="slide-button right" onclick="changeSlide(1, this.parentElement)">></button>
-            <!-- Slideshow title -->
-            <h2 class="slide-title"></h2>
-            <!-- Slideshow image/video -->
-            <img class="slide-image" src="" alt="">
-            <video class="slide-video" src="" controls></video>
-            <!-- Displaying current slideshow index (content added in slideshow.js) -->
-            <div class="index-container"></div>
-            <!-- Element made to track index and slides of slideshow -->
-            <div class="slideshow-data" index="0" 
-            slides='["../../assets/ancient/overview/1.jpg","../../assets/ancient/overview/2.jpg","../../assets/ancient/overview/3.jpg",
-            "../../assets/ancient/overview/4.jpg","../../assets/ancient/overview/5.jpg"]' slide-titles='[]'></div>
-        </div>
-    </section>
-    <!-- Section with callouts from the map -->
-    <section class="section">
-        <h2 class="title">Callouts</h2>
-        <!-- Div for the slideshow used by script slideshow.js linked at bottom of body-->
-        <div class="slideshow">
-            <!-- Buttons for navigation between slides -->
-            <button class="slide-button left" onclick="changeSlide(-1, this.parentElement)"><</button>
-            <button class="slide-button right" onclick="changeSlide(1, this.parentElement)">></button>
-            <!-- Slideshow title -->
-            <h2 class="slide-title"></h2>
-            <!-- Slideshow image/video -->
-            <img class="slide-image" src="" alt="">
-            <video class="slide-video" src="" controls></video>
-            <!-- Displaying current slideshow index (content added in slideshow.js) -->
-            <div class="index-container"></div>
-            <!-- Element made to track index and slides of slideshow -->
-            <div class="slideshow-data" index="0" 
-            slides='["../../assets/ancient/callouts/mid.jpg","../../assets/ancient/callouts/xbox.jpg","../../assets/ancient/callouts/pit.jpg",
-            "../../assets/ancient/callouts/top_mid.jpg","../../assets/ancient/callouts/red.jpg","../../assets/ancient/callouts/sniper_nest.jpg",
-            "../../assets/ancient/callouts/alley.jpg","../../assets/ancient/callouts/back_alley.jpg","../../assets/ancient/callouts/short.jpg",
-            "../../assets/ancient/callouts/long.jpg","../../assets/ancient/callouts/b_site.jpg","../../assets/ancient/callouts/wood.jpg",
-            "../../assets/ancient/callouts/cave.jpg","../../assets/ancient/callouts/cat_room.jpg","../../assets/ancient/callouts/cat.jpg",
-            "../../assets/ancient/callouts/ramp.jpg","../../assets/ancient/callouts/t_spawn.jpg","../../assets/ancient/callouts/a_main.jpg",
-            "../../assets/ancient/callouts/boost.jpg","../../assets/ancient/callouts/single.jpg","../../assets/ancient/callouts/a_site.jpg",
-            "../../assets/ancient/callouts/donut.jpg","../../assets/ancient/callouts/temple.jpg","../../assets/ancient/callouts/triple.jpg",
-            "../../assets/ancient/callouts/ct.jpg","../../assets/ancient/callouts/ct_spawn.jpg"]' 
-            slide-titles='["Mid","Xbox","Pit","Top Mid","Red","Sniper Nest","Alley","Back Alley","Short","Long","B Site","Wood","Cave",
-            "Cat Room","Cat","Ramp","T Spawn","A Main","Boost","Single","A Site","Donut","Temple","Triple","CT","CT Spawn"]'></div>
-        </div>
-    </section>
-    <!-- Section with utility from the map -->
-    <section class="section">
-        <h2 class="title">Utility</h2>
-        <div class="tabs">
-            <button class="tab-button" id="smokes" onclick="changeTabContent(this, this.parentElement)">Smokes</button>
-            <button class="tab-button" id="molotovs" onclick="changeTabContent(this, this.parentElement)">Molotovs</button>
-            <button class="tab-button" id="flashbangs" onclick="changeTabContent(this, this.parentElement)">Flashbangs</button>
-            <button class="tab-button" id="grenades" onclick="changeTabContent(this, this.parentElement)">Grenade</button>
-        </div>
-        <div class="tab-content" id="smokes">
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/smoke_red_lineup.jpg",
-            "../../assets/ancient/utility/smoke_red_preview.jpg","../../assets/ancient/utility/smoke_red.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">Red</button>
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/smoke_mid_donut_lineup.jpg",
-            "../../assets/ancient/utility/smoke_mid_donut_preview.jpg","../../assets/ancient/utility/smoke_mid_donut.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">Mid Donut</button>
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/smoke_cat_lineup.jpg",
-            "../../assets/ancient/utility/smoke_cat_preview.jpg","../../assets/ancient/utility/smoke_cat.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">Cat</button>
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/smoke_short_lineup.jpg",
-            "../../assets/ancient/utility/smoke_short_preview.jpg","../../assets/ancient/utility/smoke_short.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">Short</button>
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/smoke_long_lineup.jpg",
-            "../../assets/ancient/utility/smoke_long_preview.jpg","../../assets/ancient/utility/smoke_long.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">Long</button>
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/smoke_cave_lineup.jpg",
-            "../../assets/ancient/utility/smoke_cave_preview.jpg","../../assets/ancient/utility/smoke_cave.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">Cave</button>
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/smoke_temple_lineup.jpg",
-            "../../assets/ancient/utility/smoke_temple_preview.jpg","../../assets/ancient/utility/smoke_temple.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">Temple</button>
-            <button class="tab-button" 
-            slides='["../../assets/ancient/utility/smoke_a_site_donut_lineup.jpg",
-            "../../assets/ancient/utility/smoke_a_site_donut_preview.jpg","../../assets/ancient/utility/smoke_a_site_donut.mp4"]' 
-            slide-titles='["Left Click + Jump"]' 
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">A Site Donut</button>
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/smoke_ct_lineup.jpg",
-            "../../assets/ancient/utility/smoke_ct_preview.jpg", "../../assets/ancient/utility/smoke_ct.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">CT</button>
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/smoke_bottom_mid_lineup.jpg",
-            "../../assets/ancient/utility/smoke_bottom_mid_preview.jpg","../../assets/ancient/utility/smoke_bottom_mid.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">Bottom Mid</button> 
-        </div>
-        <div class="tab-content" id="molotovs">
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/molotov_b_site_lineup.jpg",
-            "../../assets/ancient/utility/molotov_b_site_preview.jpg","../../assets/ancient/utility/molotov_b_site.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">B Site</button>
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/molotov_wood_lineup.jpg",
-            "../../assets/ancient/utility/molotov_wood_preview.jpg","../../assets/ancient/utility/molotov_wood.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">Wood</button>
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/molotov_triple_lineup.jpg",
-            "../../assets/ancient/utility/molotov_triple_preview.jpg","../../assets/ancient/utility/molotov_triple.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">Triple</button>
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/molotov_bottom_mid_lineup.jpg",
-            "../../assets/ancient/utility/molotov_bottom_mid_preview.jpg","../../assets/ancient/utility/molotov_bottom_mid.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">Bottom Mid</button>
-        </div>
-        <div class="tab-content" id="flashbangs">
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/flashbang_b_site_lineup.jpg",
-            "../../assets/ancient/utility/flangbang_b_site_preview.jpg","../../assets/ancient/utility/flashbang_b_site.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">B Site</button>
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/flashbang_cat_lineup.jpg",
-            "../../assets/ancient/utility/flashbang_cat_preview.jpg","../../assets/ancient/utility/flashbang_cat.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">Cat</button>
-        </div>
-        <div class="tab-content" id="grenades">
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/grenade_long_lineup.jpg",
-            "../../assets/ancient/utility/grenade_long_preview.jpg","../../assets/ancient/utility/grenade_long.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">Long</button>
-            <button class="tab-button"
-            slides='["../../assets/ancient/utility/grenade_ramp_lineup.jpg",
-            "../../assets/ancient/utility/grenade_ramp_preview.jpg","../../assets/ancient/utility/grenade_ramp.mp4"]'
-            slide-titles='["Left Click + Jump"]'
-            onclick="changeSlideshowAttributes(
-                this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
-                this.getAttribute('slides'), this.getAttribute('slide-titles'))">Ramp</button>
-        </div>
-        <!-- Div for the slideshow used by script slideshow.js linked at bottom of body-->
-        <div class="slideshow">
-            <!-- Buttons for navigation between slides -->
-            <button class="slide-button left" onclick="changeSlide(-1, this.parentElement)"><</button>
-            <button class="slide-button right" onclick="changeSlide(1, this.parentElement)">></button>
-            <!-- Slideshow title -->
-            <h2 class="slide-title"></h2>
-            <!-- Slideshow image/video -->
-            <img class="slide-image" src="" alt="">
-            <video class="slide-video" src="" controls></video>
-            <!-- Displaying current slideshow index (content added in slideshow.js) -->
-            <div class="index-container"></div>
-            <!-- Element made to track index and slides of slideshow -->
-            <div class="slideshow-data" index="0" slides="[]" slide-titles="[]"></div>
-        </div>
-    </section>
+    <main>
+        <!-- Section for overview of the map -->
+        <section class="section">
+            <h2 class="title">Overview</h2>
+            <!-- Div for the slideshow used by script slideshow.js linked at bottom of body-->
+            <div class="slideshow">
+                <!-- Buttons for navigation between slides -->
+                <button class="slide-button left" onclick="changeSlide(-1, this.parentElement)"><</button>
+                <button class="slide-button right" onclick="changeSlide(1, this.parentElement)">></button>
+                <!-- Slideshow title -->
+                <h2 class="slide-title"></h2>
+                <!-- Slideshow image/video -->
+                <img class="slide-image" src="" alt="">
+                <video class="slide-video" src="" controls></video>
+                <!-- Displaying current slideshow index (content added in slideshow.js) -->
+                <div class="index-container"></div>
+                <!-- Element made to track index and slides of slideshow -->
+                <div class="slideshow-data" index="0" 
+                slides='["../../assets/ancient/overview/1.jpg","../../assets/ancient/overview/2.jpg","../../assets/ancient/overview/3.jpg",
+                "../../assets/ancient/overview/4.jpg","../../assets/ancient/overview/5.jpg"]' slide-titles='[]'></div>
+            </div>
+        </section>
+        <!-- Section with callouts from the map -->
+        <section class="section">
+            <h2 class="title">Callouts</h2>
+            <!-- Div for the slideshow used by script slideshow.js linked at bottom of body-->
+            <div class="slideshow">
+                <!-- Buttons for navigation between slides -->
+                <button class="slide-button left" onclick="changeSlide(-1, this.parentElement)"><</button>
+                <button class="slide-button right" onclick="changeSlide(1, this.parentElement)">></button>
+                <!-- Slideshow title -->
+                <h2 class="slide-title"></h2>
+                <!-- Slideshow image/video -->
+                <img class="slide-image" src="" alt="">
+                <video class="slide-video" src="" controls></video>
+                <!-- Displaying current slideshow index (content added in slideshow.js) -->
+                <div class="index-container"></div>
+                <!-- Element made to track index and slides of slideshow -->
+                <div class="slideshow-data" index="0" 
+                slides='["../../assets/ancient/callouts/mid.jpg","../../assets/ancient/callouts/xbox.jpg","../../assets/ancient/callouts/pit.jpg",
+                "../../assets/ancient/callouts/top_mid.jpg","../../assets/ancient/callouts/red.jpg","../../assets/ancient/callouts/sniper_nest.jpg",
+                "../../assets/ancient/callouts/alley.jpg","../../assets/ancient/callouts/back_alley.jpg","../../assets/ancient/callouts/short.jpg",
+                "../../assets/ancient/callouts/long.jpg","../../assets/ancient/callouts/b_site.jpg","../../assets/ancient/callouts/wood.jpg",
+                "../../assets/ancient/callouts/cave.jpg","../../assets/ancient/callouts/cat_room.jpg","../../assets/ancient/callouts/cat.jpg",
+                "../../assets/ancient/callouts/ramp.jpg","../../assets/ancient/callouts/t_spawn.jpg","../../assets/ancient/callouts/a_main.jpg",
+                "../../assets/ancient/callouts/boost.jpg","../../assets/ancient/callouts/single.jpg","../../assets/ancient/callouts/a_site.jpg",
+                "../../assets/ancient/callouts/donut.jpg","../../assets/ancient/callouts/temple.jpg","../../assets/ancient/callouts/triple.jpg",
+                "../../assets/ancient/callouts/ct.jpg","../../assets/ancient/callouts/ct_spawn.jpg"]' 
+                slide-titles='["Mid","Xbox","Pit","Top Mid","Red","Sniper Nest","Alley","Back Alley","Short","Long","B Site","Wood","Cave",
+                "Cat Room","Cat","Ramp","T Spawn","A Main","Boost","Single","A Site","Donut","Temple","Triple","CT","CT Spawn"]'></div>
+            </div>
+        </section>
+        <!-- Section with utility from the map -->
+        <section class="section">
+            <h2 class="title">Utility</h2>
+            <!-- Tab for switching between utility using tabs.js -->
+            <div class="tabs">
+                <button class="tab-button" id="smokes" onclick="changeTabContent(this, this.parentElement)">Smokes</button>
+                <button class="tab-button" id="molotovs" onclick="changeTabContent(this, this.parentElement)">Molotovs</button>
+                <button class="tab-button" id="flashbangs" onclick="changeTabContent(this, this.parentElement)">Flashbangs</button>
+                <button class="tab-button" id="grenades" onclick="changeTabContent(this, this.parentElement)">Grenade</button>
+            </div>
+            <!-- Buttons changing attributes of the slideshow to show different smoke lineups -->
+            <div class="tab-content" id="smokes">
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/smoke_red_lineup.jpg",
+                "../../assets/ancient/utility/smoke_red_preview.jpg","../../assets/ancient/utility/smoke_red.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Red</button>
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/smoke_mid_donut_lineup.jpg",
+                "../../assets/ancient/utility/smoke_mid_donut_preview.jpg","../../assets/ancient/utility/smoke_mid_donut.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Mid Donut</button>
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/smoke_cat_lineup.jpg",
+                "../../assets/ancient/utility/smoke_cat_preview.jpg","../../assets/ancient/utility/smoke_cat.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Cat</button>
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/smoke_short_lineup.jpg",
+                "../../assets/ancient/utility/smoke_short_preview.jpg","../../assets/ancient/utility/smoke_short.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Short</button>
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/smoke_long_lineup.jpg",
+                "../../assets/ancient/utility/smoke_long_preview.jpg","../../assets/ancient/utility/smoke_long.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Long</button>
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/smoke_cave_lineup.jpg",
+                "../../assets/ancient/utility/smoke_cave_preview.jpg","../../assets/ancient/utility/smoke_cave.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Cave</button>
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/smoke_temple_lineup.jpg",
+                "../../assets/ancient/utility/smoke_temple_preview.jpg","../../assets/ancient/utility/smoke_temple.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Temple</button>
+                <button class="tab-button" 
+                slides='["../../assets/ancient/utility/smoke_a_site_donut_lineup.jpg",
+                "../../assets/ancient/utility/smoke_a_site_donut_preview.jpg","../../assets/ancient/utility/smoke_a_site_donut.mp4"]' 
+                slide-titles='["Left Click + Jump"]' 
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">A Site Donut</button>
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/smoke_ct_lineup.jpg",
+                "../../assets/ancient/utility/smoke_ct_preview.jpg", "../../assets/ancient/utility/smoke_ct.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">CT</button>
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/smoke_bottom_mid_lineup.jpg",
+                "../../assets/ancient/utility/smoke_bottom_mid_preview.jpg","../../assets/ancient/utility/smoke_bottom_mid.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Bottom Mid</button> 
+            </div>
+            <!-- Buttons changing attributes of the slideshow to show different molotov lineups -->
+            <div class="tab-content" id="molotovs">
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/molotov_b_site_lineup.jpg",
+                "../../assets/ancient/utility/molotov_b_site_preview.jpg","../../assets/ancient/utility/molotov_b_site.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">B Site</button>
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/molotov_wood_lineup.jpg",
+                "../../assets/ancient/utility/molotov_wood_preview.jpg","../../assets/ancient/utility/molotov_wood.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Wood</button>
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/molotov_triple_lineup.jpg",
+                "../../assets/ancient/utility/molotov_triple_preview.jpg","../../assets/ancient/utility/molotov_triple.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Triple</button>
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/molotov_bottom_mid_lineup.jpg",
+                "../../assets/ancient/utility/molotov_bottom_mid_preview.jpg","../../assets/ancient/utility/molotov_bottom_mid.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Bottom Mid</button>
+            </div>
+            <!-- Buttons changing attributes of the slideshow to show different flashbang lineups -->
+            <div class="tab-content" id="flashbangs">
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/flashbang_b_site_lineup.jpg",
+                "../../assets/ancient/utility/flangbang_b_site_preview.jpg","../../assets/ancient/utility/flashbang_b_site.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">B Site</button>
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/flashbang_cat_lineup.jpg",
+                "../../assets/ancient/utility/flashbang_cat_preview.jpg","../../assets/ancient/utility/flashbang_cat.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Cat</button>
+            </div>
+            <!-- Buttons changing attributes of the slideshow to show different grenade lineups -->
+            <div class="tab-content" id="grenades">
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/grenade_long_lineup.jpg",
+                "../../assets/ancient/utility/grenade_long_preview.jpg","../../assets/ancient/utility/grenade_long.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Long</button>
+                <button class="tab-button"
+                slides='["../../assets/ancient/utility/grenade_ramp_lineup.jpg",
+                "../../assets/ancient/utility/grenade_ramp_preview.jpg","../../assets/ancient/utility/grenade_ramp.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Ramp</button>
+            </div>
+            <!-- Div for the slideshow used by script slideshow.js linked at bottom of body-->
+            <div class="slideshow">
+                <!-- Buttons for navigation between slides -->
+                <button class="slide-button left" onclick="changeSlide(-1, this.parentElement)"><</button>
+                <button class="slide-button right" onclick="changeSlide(1, this.parentElement)">></button>
+                <!-- Slideshow title -->
+                <h2 class="slide-title"></h2>
+                <!-- Slideshow image/video -->
+                <img class="slide-image" src="" alt="">
+                <video class="slide-video" src="" controls></video>
+                <!-- Displaying current slideshow index (content added in slideshow.js) -->
+                <div class="index-container"></div>
+                <!-- Element made to track index and slides of slideshow -->
+                <div class="slideshow-data" index="0" slides="[]" slide-titles="[]"></div>
+            </div>
+        </section>
+    </main>
     <!-- Footer with link to my github-->
     <footer class="footer">
         <a class="github" href="https://github.com/ludvig-moller">Github: ludvig-moller</a>
