@@ -2,8 +2,19 @@
     This file contains styling for all the map pages
 */
 
+.main {
+    flex: 1;
+    width: 100%;
+}
+
 .section {
     margin: 50px 10% 50px 10%;;
+}
+
+@media only screen and (max-width: 750px) {
+    .section {
+        margin: 50px 10px 50px 10px
+    }
 }
 
 .slideshow {
@@ -70,10 +81,11 @@
 .slideshow .index-container {
     grid-row: 2;
     grid-column: 2;
-    width: 50%;
     display: flex;
+    align-self: center;
     justify-self: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 75%;
 }
 
 .slideshow .index-container .index {
@@ -85,6 +97,44 @@
 
 .slideshow .index-container .index.active {
     background-color: #759FA8;
+}
+
+@media only screen and (max-width: 750px) {
+    .slideshow {
+        display: grid;
+        grid-template-rows: 100% 20px;
+        grid-template-columns: 10% 80% 10%;
+    }
+
+    .slideshow .slide-button.left {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .slideshow .slide-button.right {
+        grid-row: 2;
+        grid-column: 3;
+    }
+
+    .slideshow .slide-image {
+        grid-row: 1;
+        grid-column: 1 / 4;
+    }
+
+    .slideshow .slide-video {
+        grid-row: 1;
+        grid-column: 1 / 4;
+    }
+
+    .slideshow .index-container {
+        display: flex;
+        width: 100%;
+    }
+
+    .slideshow .index-container .index {
+        height: 7px;
+        width: 7px;
+    }
 }
 
 .tabs {
@@ -115,4 +165,16 @@
 
 .tab-button.active {
     background-color: #759FA8;
+}
+
+@media only screen and (max-width: 750px) {
+    .tabs {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .tab-content {
+        max-width: 100%;
+        margin: 0;
+    }
 }
