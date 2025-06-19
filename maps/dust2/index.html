@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Map Guide Dust 2</title>
+    <!-- Linking css files to this page -->
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/maps.css">
+    <!-- Linking font IBM Plex Mono from google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,
+    wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+    <!-- Header contaning the website title linking to the home page and name of the map -->
+    <header class="header">
+        <a class="title" href="/cs2-map-guide/">CS2 Map Guide</a>
+        <h1 class="title">Dust 2</h1>
+    </header>
+    <main class="main">
+        <!-- Section for overview of the map -->
+        <section class="section">
+            <h2 class="title">Overview</h2>
+            <!-- Div for the slideshow used by script slideshow.js linked at bottom of body-->
+            <div class="slideshow">
+                <!-- Buttons for navigation between slides -->
+                <button class="slide-button left" onclick="changeSlide(-1, this.parentElement)"><</button>
+                <button class="slide-button right" onclick="changeSlide(1, this.parentElement)">></button>
+                <!-- Slideshow title -->
+                <h2 class="slide-title"></h2>
+                <!-- Slideshow image/video -->
+                <img class="slide-image" src="" alt="">
+                <video class="slide-video" src="" controls></video>
+                <!-- Displaying current slideshow index (content added in slideshow.js) -->
+                <div class="index-container"></div>
+                <!-- Element made to track index and slides of slideshow -->
+                <div class="slideshow-data" index="0" 
+                slides='["../../assets/dust2/overview/1.jpg","../../assets/dust2/overview/2.jpg","../../assets/dust2/overview/3.jpg",
+                "../../assets/dust2/overview/4.jpg","../../assets/dust2/overview/5.jpg","../../assets/dust2/overview/6.jpg"]' slide-titles='[]'></div>
+            </div>
+        </section>
+        <!-- Section with callouts from the map -->
+        <section class="section">
+            <h2 class="title">Callouts</h2>
+            <!-- Div for the slideshow used by script slideshow.js linked at bottom of body-->
+            <div class="slideshow">
+                <!-- Buttons for navigation between slides -->
+                <button class="slide-button left" onclick="changeSlide(-1, this.parentElement)"><</button>
+                <button class="slide-button right" onclick="changeSlide(1, this.parentElement)">></button>
+                <!-- Slideshow title -->
+                <h2 class="slide-title"></h2>
+                <!-- Slideshow image/video -->
+                <img class="slide-image" src="" alt="">
+                <video class="slide-video" src="" controls></video>
+                <!-- Displaying current slideshow index (content added in slideshow.js) -->
+                <div class="index-container"></div>
+                <!-- Element made to track index and slides of slideshow -->
+                <div class="slideshow-data" index="0" 
+                slides='["../../assets/dust2/callouts/mid.jpg","../../assets/dust2/callouts/xbox.jpg","../../assets/dust2/callouts/cat.jpg",
+                "../../assets/dust2/callouts/top_mid.jpg","../../assets/dust2/callouts/suicide.jpg","../../assets/dust2/callouts/t_spawn.jpg",
+                "../../assets/dust2/callouts/outside_tunnels.jpg","../../assets/dust2/callouts/upper_tunnels.jpg","../../assets/dust2/callouts/lower_tunnels.jpg",
+                "../../assets/dust2/callouts/close.jpg","../../assets/dust2/callouts/boost.jpg","../../assets/dust2/callouts/b_car.jpg",
+                "../../assets/dust2/callouts/big_box.jpg","../../assets/dust2/callouts/b_plat.jpg","../../assets/dust2/callouts/b_site.jpg",
+                "../../assets/dust2/callouts/window.jpg","../../assets/dust2/callouts/b_doors.jpg","../../assets/dust2/callouts/mid_doors.jpg",
+                "../../assets/dust2/callouts/ct_spawn.jpg","../../assets/dust2/callouts/short_boost.jpg","../../assets/dust2/callouts/short.jpg",
+                "../../assets/dust2/callouts/cross.jpg","../../assets/dust2/callouts/ramp.jpg","../../assets/dust2/callouts/a_site.jpg",
+                "../../assets/dust2/callouts/goose.jpg","../../assets/dust2/callouts/ninja.jpg","../../assets/dust2/callouts/a_car.jpg",
+                "../../assets/dust2/callouts/long.jpg","../../assets/dust2/callouts/pit.jpg","../../assets/dust2/callouts/blue.jpg",
+                "../../assets/dust2/callouts/long_doors.jpg"]'
+                slide-titles='["Mid","Xbox","Cat","Top Mid","Suicide","T Spawn","Outside Tunnels","Upper Tunnels","Lower Tunnels",
+                "Close","Boost","B Car","Big Box","B Plat","B Site","Window","B Doors","Mid Doors","CT Spawn","Short Boost",
+                "Short","Cross","Ramp","A Site","Goose","Ninja","A Car","Long","Pit","Blue","Long Doors"]'></div>
+            </div>
+        </section>
+        <!-- Section with utility from the map -->
+        <section class="section">
+            <h2 class="title">Utility</h2>
+            <!-- Tab for switching between utility using tabs.js -->
+            <div class="tabs">
+                <button class="tab-button" id="smokes" onclick="changeTabContent(this, this.parentElement)">Smokes</button>
+                <button class="tab-button" id="molotovs" onclick="changeTabContent(this, this.parentElement)">Molotovs</button>
+                <button class="tab-button" id="flashbangs" onclick="changeTabContent(this, this.parentElement)">Flashbangs</button>
+                <button class="tab-button" id="grenades" onclick="changeTabContent(this, this.parentElement)">Grenade</button>
+            </div>
+            <!-- Buttons changing attributes of the slideshow to show different smoke lineups -->
+            <div class="tab-content" id="smokes">
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/smoke_xbox_lineup.jpg",
+                "../../assets/dust2/utility/smoke_xbox_preview.jpg","../../assets/dust2/utility/smoke_xbox.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Xbox</button>
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/smoke_window_lineup.jpg",
+                "../../assets/dust2/utility/smoke_window_preview.jpg","../../assets/dust2/utility/smoke_window.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Window</button>
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/smoke_b_doors_lineup.jpg",
+                "../../assets/dust2/utility/smoke_b_doors_preview.jpg","../../assets/dust2/utility/smoke_b_doors.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">B Doors</button>
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/smoke_ct_spawn_lineup.jpg",
+                "../../assets/dust2/utility/smoke_ct_spawn_preview.jpg","../../assets/dust2/utility/smoke_ct_spawn.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">CT Spawn</button>
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/smoke_a_car_lineup.jpg",
+                "../../assets/dust2/utility/smoke_a_car_preview.jpg","../../assets/dust2/utility/smoke_a_car.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">A Car</button>
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/smoke_cross_lineup.jpg",
+                "../../assets/dust2/utility/smoke_cross_preview.jpg","../../assets/dust2/utility/smoke_cross.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Cross</button>
+                <button class="tab-button" 
+                slides='["../../assets/dust2/utility/smoke_short_lineup.jpg",
+                "../../assets/dust2/utility/smoke_short_preview.jpg","../../assets/dust2/utility/smoke_short.mp4"]' 
+                slide-titles='["Left Click + Jump"]' 
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Short</button>
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/smoke_suicide_lineup.jpg",
+                "../../assets/dust2/utility/smoke_suicide_preview.jpg", "../../assets/dust2/utility/smoke_suicide.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Suicide</button>
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/smoke_mid_lineup.jpg",
+                "../../assets/dust2/utility/smoke_mid_preview.jpg","../../assets/dust2/utility/smoke_mid.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Mid</button>
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/smoke_tunnels_lineup.jpg",
+                "../../assets/dust2/utility/smoke_tunnels_preview.jpg","../../assets/dust2/utility/smoke_tunnels.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Tunnels</button>
+            </div>
+            <!-- Buttons changing attributes of the slideshow to show different molotov lineups -->
+            <div class="tab-content" id="molotovs">
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/molotov_boost_lineup.jpg",
+                "../../assets/dust2/utility/molotov_boost_preview.jpg","../../assets/dust2/utility/molotov_boost.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Boost</button>
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/molotov_a_site_lineup.jpg",
+                "../../assets/dust2/utility/molotov_a_site_preview.jpg","../../assets/dust2/utility/molotov_a_site.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">A Site</button>
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/molotov_cat_lineup.jpg",
+                "../../assets/dust2/utility/molotov_cat_preview.jpg","../../assets/dust2/utility/molotov_cat.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Cat</button>
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/molotov_b_site_lineup.jpg",
+                "../../assets/dust2/utility/molotov_b_site_preview.jpg","../../assets/dust2/utility/molotov_b_site.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">B Site</button>
+            </div>
+            <!-- Buttons changing attributes of the slideshow to show different flashbang lineups -->
+            <div class="tab-content" id="flashbangs">
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/flashbang_b_site_lineup.jpg",
+                "../../assets/dust2/utility/flashbang_b_site_preview.jpg","../../assets/dust2/utility/flashbang_b_site.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">B Site</button>
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/flashbang_long_lineup.jpg",
+                "../../assets/dust2/utility/flashbang_long_preview.jpg","../../assets/dust2/utility/flashbang_long.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Long</button>
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/flashbang_long_doors_lineup.jpg",
+                "../../assets/dust2/utility/flashbang_long_doors_preview.jpg","../../assets/dust2/utility/flashbang_long_doors.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Long Doors</button>
+            </div>
+            <!-- Buttons changing attributes of the slideshow to show different grenade lineups -->
+            <div class="tab-content" id="grenades">
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/grenade_mid_doors_lineup.jpg",
+                "../../assets/dust2/utility/grenade_mid_doors_preview.jpg","../../assets/dust2/utility/grenade_mid_doors.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Mid Doors</button>
+                <button class="tab-button"
+                slides='["../../assets/dust2/utility/grenade_short_lineup.jpg",
+                "../../assets/dust2/utility/grenade_short_preview.jpg","../../assets/dust2/utility/grenade_short.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Short</button>
+            </div>
+            <!-- Div for the slideshow used by script slideshow.js linked at bottom of body-->
+            <div class="slideshow">
+                <!-- Buttons for navigation between slides -->
+                <button class="slide-button left" onclick="changeSlide(-1, this.parentElement)"><</button>
+                <button class="slide-button right" onclick="changeSlide(1, this.parentElement)">></button>
+                <!-- Slideshow title -->
+                <h2 class="slide-title"></h2>
+                <!-- Slideshow image/video -->
+                <img class="slide-image" src="" alt="">
+                <video class="slide-video" src="" controls></video>
+                <!-- Displaying current slideshow index (content added in slideshow.js) -->
+                <div class="index-container"></div>
+                <!-- Element made to track index and slides of slideshow -->
+                <div class="slideshow-data" index="0" slides="[]" slide-titles="[]"></div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer with link to my github-->
+    <footer class="footer">
+        <a class="github" href="https://github.com/ludvig-moller">Github: ludvig-moller</a>
+    </footer>
+    <!-- Linking slideshow and tabs scripts -->
+    <script src="../../scripts/slideshow.js"></script>
+    <script src="../../scripts/tabs.js"></script>
+</body>
+</html>
