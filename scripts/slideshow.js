@@ -36,7 +36,7 @@ function createSlideshow(slideshowElement) {
 // Change slideshow attributes
 // Change slides (images/videos) and slide titles
 function changeSlideshowAttributes(element, slideshowElement, slides, slideTitles) {
-    // Changing active class to new button
+    // Changing active class new button
     var activeButtons = element.parentElement.getElementsByClassName("tab-button active")
     for (var i = 0; i<activeButtons.length; i++) {
         activeButtons[i].classList.remove("active")
@@ -127,8 +127,8 @@ function updateSlide(index, slides, titles, slideshowImageElement, slideshowVide
         return
     }
 
-    var fileExtention = currentSlide.slice(-3)
-    if (fileExtention == "jpg") {
+    var fileExtension = currentSlide.slice(-3)
+    if (fileExtension == "jpg") {
         slideshowImageElement.setAttribute("src", currentSlide)
         slideshowImageElement.style.display = "block"
         slideshowVideoElement.setAttribute("src", "")

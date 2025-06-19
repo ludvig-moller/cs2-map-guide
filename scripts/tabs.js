@@ -1,5 +1,5 @@
 
-// Getting all tabs in document and activting first button in each tab
+// Getting all tabs in document and activating first button in each tab
 var tabs = document.getElementsByClassName("tabs")
 for (var i = 0; i<tabs.length; i++) {
     tabs[i].children[0].click()
@@ -7,14 +7,14 @@ for (var i = 0; i<tabs.length; i++) {
 
 // Changing tab content
 function changeTabContent(currentElement, parentElement) {
-    // Changing active class to new button
+    // Changing active class new button
     var activeButtons = parentElement.getElementsByClassName("tab-button active")
     for (var i = 0; i<activeButtons.length; i++) {
         activeButtons[i].classList.remove("active")
     }
     currentElement.classList.add("active")
 
-    // Getting tab id
+    // Getting tab ID
     var newTabId = currentElement.getAttribute("id")
     
     // Getting tab-content and setting block display to the one matching the new tab id
