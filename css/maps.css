@@ -2,27 +2,34 @@
     This file contains styling for all the map pages
 */
 
+/* Main area takes up remaining vertical space and full width */
 .main {
     flex: 1;
     width: 100%;
 }
 
+/* Margin for sections */
 .section {
-    margin: 50px 10% 50px 10%;;
+    margin: 50px 10% 50px 10%;
 }
 
+/* Adjusting margin for sections on smaller screens */
 @media only screen and (max-width: 750px) {
     .section {
         margin: 50px 10px 50px 10px
     }
 }
 
+/* -------- Slideshow -------- */
+
+/* Slideshow grid layout: buttons on each side, slide centered and index below */
 .slideshow {
     display: grid;
     grid-template-rows: 100% 20px;
     grid-template-columns: 10% 80% 10%;
 }
 
+/* Slideshow button styling */
 .slideshow .slide-button {
     justify-self: center;
     align-self: center;
@@ -36,24 +43,27 @@
     background-color: #B0CAD0;
 }
 
+/* Changes button color on hover */
 .slideshow .slide-button:hover {
     background-color: #81a3ab;
 }
 
+/* Changes button color on press */
 .slideshow .slide-button:active {
     background-color: #759FA8;
 }
 
+/* Slideshow buttons grid positioning */
 .slideshow .slide-button.left {
     grid-row: 1;
     grid-column: 1;
 }
-
 .slideshow .slide-button.right {
     grid-row: 1;
     grid-column: 3;
 }
 
+/* Slide title positioned on top of slideshow image/video */
 .slideshow .slide-title {
     grid-row: 1;
     grid-column: 2;
@@ -62,6 +72,7 @@
     color: white;
 }
 
+/* Slideshow image and video styling */
 .slideshow .slide-image {
     grid-row: 1;
     grid-column: 2;
@@ -78,6 +89,7 @@
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Slideshow index container layout */
 .slideshow .index-container {
     grid-row: 2;
     grid-column: 2;
@@ -88,6 +100,7 @@
     width: 75%;
 }
 
+/* Index dots styling */
 .slideshow .index-container .index {
     height: 10px;
     width: 10px;
@@ -95,27 +108,24 @@
     background-color: #B0CAD0;
 }
 
+/* Index dot change color when current index */
 .slideshow .index-container .index.active {
     background-color: #759FA8;
 }
 
+/* Responsive slideshow on smaller screens */
 @media only screen and (max-width: 750px) {
-    .slideshow {
-        display: grid;
-        grid-template-rows: 100% 20px;
-        grid-template-columns: 10% 80% 10%;
-    }
-
+    /* Positioning buttons below the slide */
     .slideshow .slide-button.left {
         grid-row: 2;
         grid-column: 1;
     }
-
     .slideshow .slide-button.right {
         grid-row: 2;
         grid-column: 3;
     }
 
+    /* Slideshow image/video takes up full row */
     .slideshow .slide-image {
         grid-row: 1;
         grid-column: 1 / 4;
@@ -126,17 +136,22 @@
         grid-column: 1 / 4;
     }
 
+    /* Expanding index container */
     .slideshow .index-container {
         display: flex;
         width: 100%;
     }
 
+    /* Scale down index dots */
     .slideshow .index-container .index {
         height: 7px;
         width: 7px;
     }
 }
 
+/* -------- Tabs -------- */
+
+/* Tabs styling */
 .tabs {
     justify-self: center;
     margin: 10px;
@@ -149,6 +164,7 @@
     max-width: 80%;
 }
 
+/* Tab button styling */
 .tab-button {
     margin: 5px;
     height: 30px;
@@ -159,14 +175,17 @@
     background-color: #B0CAD0;
 }
 
+/* Changes button color on hover */
 .tab-button:hover {
     background-color: #81a3ab;
 }
 
+/* Changes button color when active */
 .tab-button.active {
     background-color: #759FA8;
 }
 
+/* Increased width and removed margin for tabs on smaller screens */
 @media only screen and (max-width: 750px) {
     .tabs {
         max-width: 100%;

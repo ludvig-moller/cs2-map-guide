@@ -2,10 +2,12 @@
     This file contains styling for the home page
 */
 
+/* Main area takes up remaining vertical space */
 .main {
     flex: 1;
 }
 
+/* Map grid layout with spacing between cards */
 .maps .map-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -14,6 +16,7 @@
     margin: 25px;
 }
 
+/* Stack map cards vertically on smaller screens */
 @media only screen and (max-width: 750px) {
     .maps .map-container {
         grid-template-rows: auto;
@@ -21,6 +24,7 @@
     }
 }
 
+/* Map card layout and styling */
 .maps .map-container .card {
     display: flex;
     justify-content: center;
@@ -31,6 +35,7 @@
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Card title positioned on top of image */
 .maps .map-container .card .title {
     position: absolute;
     z-index: 1;
@@ -38,10 +43,12 @@
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
+/* Smooth transintion for image */
 .maps .map-container .card .image {
     transition: transform .5s;
 }
 
+/* Scale up image on card hover */
 .maps .map-container .card:hover .image {
     transform: scale(1.3);
 }
