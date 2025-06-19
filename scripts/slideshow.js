@@ -1,6 +1,7 @@
 
-// Getting all slideshow in document
+// Getting all slideshows in document
 var slideshowElements = document.getElementsByClassName("slideshow")
+// Looping through slideshows and creating it
 for (var i = 0; i<slideshowElements.length; i++) {
     createSlideshow(slideshowElements[i])
 }
@@ -119,7 +120,7 @@ function updateIndexContainer(index, slideshowIndexContainerElement) {
 // Updating slide
 // Setting src of image/video element to correct file
 function updateSlide(index, slides, titles, slideshowImageElement, slideshowVideoElement, slideshowTitleElement) {
-    // Getting current slide and looking at the file extension for image or video
+    // Getting current slide and check file extension for image or video
     var currentSlide = slides[index]
 
     if (currentSlide == undefined) {
@@ -141,6 +142,7 @@ function updateSlide(index, slides, titles, slideshowImageElement, slideshowVide
         slideshowImageElement.style.display = "none"
     }
 
+    // Updating the slide title
     if (titles.length-1<index) {
         slideshowTitleElement.innerText = ""
     } else {
