@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Map Guide Mirage</title>
+    <!-- Linking css files to this page -->
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/maps.css">
+    <!-- Linking font IBM Plex Mono from google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,
+    wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+    <!-- Header contaning the website title linking to the home page and name of the map -->
+    <header class="header">
+        <a class="title" href="/cs2-map-guide/">CS2 Map Guide</a>
+        <h1 class="title">Mirage</h1>
+    </header>
+    <main class="main">
+        <!-- Section for overview of the map -->
+        <section class="section">
+            <h2 class="title">Overview</h2>
+            <!-- Div for the slideshow used by script slideshow.js linked at bottom of body -->
+            <div class="slideshow">
+                <!-- Buttons for navigation between slides -->
+                <button class="slide-button left" onclick="changeSlide(-1, this.parentElement)"><</button>
+                <button class="slide-button right" onclick="changeSlide(1, this.parentElement)">></button>
+                <!-- Slideshow title -->
+                <h2 class="slide-title"></h2>
+                <!-- Slideshow image/video -->
+                <img class="slide-image" src="" alt="">
+                <video class="slide-video" src="" controls></video>
+                <!-- Displaying current slideshow index (content added in slideshow.js) -->
+                <div class="index-container"></div>
+                <!-- Element made to track index and slides of slideshow -->
+                <div class="slideshow-data" index="0" 
+                slides='["../../assets/mirage/overview/1.jpg","../../assets/mirage/overview/2.jpg","../../assets/mirage/overview/3.jpg",
+                "../../assets/mirage/overview/4.jpg","../../assets/mirage/overview/5.jpg"]' slide-titles='[]'></div>
+            </div>
+        </section>
+        <!-- Section with callouts from the map -->
+        <section class="section">
+            <h2 class="title">Callouts</h2>
+            <!-- Div for the slideshow used by script slideshow.js linked at bottom of body -->
+            <div class="slideshow">
+                <!-- Buttons for navigation between slides -->
+                <button class="slide-button left" onclick="changeSlide(-1, this.parentElement)"><</button>
+                <button class="slide-button right" onclick="changeSlide(1, this.parentElement)">></button>
+                <!-- Slideshow title -->
+                <h2 class="slide-title"></h2>
+                <!-- Slideshow image/video -->
+                <img class="slide-image" src="" alt="">
+                <video class="slide-video" src="" controls></video>
+                <!-- Displaying current slideshow index (content added in slideshow.js) -->
+                <div class="index-container"></div>
+                <!-- Element made to track index and slides of slideshow -->
+                <div class="slideshow-data" index="0"
+                slides='["../../assets/mirage/callouts/mid.jpg","../../assets/mirage/callouts/window.jpg","../../assets/mirage/callouts/under.jpg",
+                "../../assets/mirage/callouts/cat.jpg","../../assets/mirage/callouts/ladder_room.jpg","../../assets/mirage/callouts/connector.jpg",
+                "../../assets/mirage/callouts/chair.jpg","../../assets/mirage/callouts/mid_boxes.jpg","../../assets/mirage/callouts/top_mid.jpg",
+                "../../assets/mirage/callouts/side_alley.jpg","../../assets/mirage/callouts/apps_ramp.jpg","../../assets/mirage/callouts/kitchen.jpg",
+                "../../assets/mirage/callouts/apps.jpg","../../assets/mirage/callouts/van.jpg","../../assets/mirage/callouts/b_site.jpg",
+                "../../assets/mirage/callouts/arches.jpg","../../assets/mirage/callouts/short.jpg","../../assets/mirage/callouts/e_box.jpg",
+                "../../assets/mirage/callouts/market_window.jpg","../../assets/mirage/callouts/bench.jpg","../../assets/mirage/callouts/door.jpg",
+                "../../assets/mirage/callouts/market.jpg","../../assets/mirage/callouts/ct_spawn.jpg","../../assets/mirage/callouts/ct.jpg",
+                "../../assets/mirage/callouts/ticket.jpg","../../assets/mirage/callouts/a_site.jpg","../../assets/mirage/callouts/triple.jpg",
+                "../../assets/mirage/callouts/jungle.jpg","../../assets/mirage/callouts/stairs.jpg","../../assets/mirage/callouts/sandwich.jpg",
+                "../../assets/mirage/callouts/tetris.jpg","../../assets/mirage/callouts/shadows.jpg","../../assets/mirage/callouts/firebox.jpg",
+                "../../assets/mirage/callouts/ninja.jpg","../../assets/mirage/callouts/balcony.jpg","../../assets/mirage/callouts/palace.jpg",
+                "../../assets/mirage/callouts/ramp.jpg","../../assets/mirage/callouts/t_spawn.jpg"]'
+                slide-titles='["Mid","Window","Under","Cat","Ladder Room","Connector","Chair","Mid Boxes","Top Mid","Side Alley","Apps Ramp",
+                "Kitchen","Apps","Van","B Site","Arches","Short","E Box","Market Window","Bench","Door","Market","CT Spawn","CT","Ticket",
+                "A Site","Triple","Jungle","Stairs","Sandwich","Tetris","Shadows","Firebox","Ninja","Balcony","Palace","Ramp","T Spawn"]'></div>
+            </div>
+        </section>
+        <!-- Section with utility from the map -->
+        <section class="section">
+            <h2 class="title">Utility</h2>
+            <!-- Tab for switching between utility using tabs.js -->
+            <div class="tabs">
+                <button class="tab-button" id="smokes" onclick="changeTabContent(this, this.parentElement)">Smokes</button>
+                <button class="tab-button" id="molotovs" onclick="changeTabContent(this, this.parentElement)">Molotovs</button>
+                <button class="tab-button" id="flashbangs" onclick="changeTabContent(this, this.parentElement)">Flashbangs</button>
+                <button class="tab-button" id="grenades" onclick="changeTabContent(this, this.parentElement)">Grenade</button>
+            </div>
+            <!-- Buttons changing attributes of the slideshow to show different smoke lineups -->
+            <div class="tab-content" id="smokes">
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/smoke_window_lineup.jpg",
+                "../../assets/mirage/utility/smoke_window_preview.jpg","../../assets/mirage/utility/smoke_window.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Window</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/smoke_connector_lineup.jpg",
+                "../../assets/mirage/utility/smoke_connector_preview.jpg","../../assets/mirage/utility/smoke_connector.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Connector</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/smoke_door_lineup.jpg",
+                "../../assets/mirage/utility/smoke_door_preview.jpg","../../assets/mirage/utility/smoke_door.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Door</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/smoke_market_window_lineup.jpg",
+                "../../assets/mirage/utility/smoke_market_window_preview.jpg","../../assets/mirage/utility/smoke_market_window.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Market Window</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/smoke_left_arches_lineup.jpg",
+                "../../assets/mirage/utility/smoke_left_arches_preview.jpg","../../assets/mirage/utility/smoke_left_arches.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Left Arches</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/smoke_right_arches_lineup.jpg",
+                "../../assets/mirage/utility/smoke_right_arches_preview.jpg","../../assets/mirage/utility/smoke_right_arches.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Right Arches</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/smoke_short_lineup.jpg",
+                "../../assets/mirage/utility/smoke_short_preview.jpg","../../assets/mirage/utility/smoke_short.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Short</button>
+                <button class="tab-button" 
+                slides='["../../assets/mirage/utility/smoke_ct_lineup.jpg",
+                "../../assets/mirage/utility/smoke_ct_preview.jpg","../../assets/mirage/utility/smoke_ct.mp4"]' 
+                slide-titles='["Left Click + Jump"]' 
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">CT</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/smoke_stairs_lineup.jpg",
+                "../../assets/mirage/utility/smoke_stairs_preview.jpg", "../../assets/mirage/utility/smoke_stairs.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Stairs</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/smoke_jungle_lineup.jpg",
+                "../../assets/mirage/utility/smoke_jungle_preview.jpg","../../assets/mirage/utility/smoke_jungle.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Jungle</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/smoke_ramp_lineup.jpg",
+                "../../assets/mirage/utility/smoke_ramp_preview.jpg","../../assets/mirage/utility/smoke_ramp.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Ramp</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/smoke_palace_lineup.jpg",
+                "../../assets/mirage/utility/smoke_palace_preview.jpg","../../assets/mirage/utility/smoke_palace.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0],
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Palace</button>
+            </div>
+            <!-- Buttons changing attributes of the slideshow to show different molotov lineups -->
+            <div class="tab-content" id="molotovs">
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/molotov_window_lineup.jpg",
+                "../../assets/mirage/utility/molotov_window_preview.jpg","../../assets/mirage/utility/molotov_window.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Window</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/molotov_shadows_lineup.jpg",
+                "../../assets/mirage/utility/molotov_shadows_preview.jpg","../../assets/mirage/utility/molotov_shadows.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Shadows</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/molotov_apps_lineup.jpg",
+                "../../assets/mirage/utility/molotov_apps_preview.jpg","../../assets/mirage/utility/molotov_apps.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Apps</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/molotov_palace_lineup.jpg",
+                "../../assets/mirage/utility/molotov_palace_preview.jpg","../../assets/mirage/utility/molotov_palace.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Palace</button>
+            </div>
+            <!-- Buttons changing attributes of the slideshow to show different flashbang lineups -->
+            <div class="tab-content" id="flashbangs">
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/flashbang_b_lineup.jpg",
+                "../../assets/mirage/utility/flashbang_b_preview.jpg","../../assets/mirage/utility/flashbang_b.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">B</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/flashbang_a_lineup.jpg",
+                "../../assets/mirage/utility/flashbang_a_preview.jpg","../../assets/mirage/utility/flashbang_a.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">A</button>
+            </div>
+            <!-- Buttons changing attributes of the slideshow to show different grenade lineups -->
+            <div class="tab-content" id="grenades">
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/grenade_window_lineup.jpg",
+                "../../assets/mirage/utility/grenade_window_preview.jpg","../../assets/mirage/utility/grenade_window.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Window</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/grenade_palace_lineup.jpg",
+                "../../assets/mirage/utility/grenade_palace_preview.jpg","../../assets/mirage/utility/grenade_palace.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Palace</button>
+                <button class="tab-button"
+                slides='["../../assets/mirage/utility/grenade_ramp_lineup.jpg",
+                "../../assets/mirage/utility/grenade_ramp_preview.jpg","../../assets/mirage/utility/grenade_ramp.mp4"]'
+                slide-titles='["Left Click + Jump"]'
+                onclick="changeSlideshowAttributes(
+                    this, this.parentElement.parentElement.getElementsByClassName('slideshow')[0], 
+                    this.getAttribute('slides'), this.getAttribute('slide-titles'))">Ramp</button>
+            </div>
+            <!-- Div for the slideshow used by script slideshow.js linked at bottom of body -->
+            <div class="slideshow">
+                <!-- Buttons for navigation between slides -->
+                <button class="slide-button left" onclick="changeSlide(-1, this.parentElement)"><</button>
+                <button class="slide-button right" onclick="changeSlide(1, this.parentElement)">></button>
+                <!-- Slideshow title -->
+                <h2 class="slide-title"></h2>
+                <!-- Slideshow image/video -->
+                <img class="slide-image" src="" alt="">
+                <video class="slide-video" src="" controls></video>
+                <!-- Displaying current slideshow index (content added in slideshow.js) -->
+                <div class="index-container"></div>
+                <!-- Element made to track index and slides of slideshow -->
+                <div class="slideshow-data" index="0" slides="[]" slide-titles="[]"></div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer with link to my github -->
+    <footer class="footer">
+        <a class="github" href="https://github.com/ludvig-moller">Github: ludvig-moller</a>
+    </footer>
+    <!-- Linking slideshow and tabs scripts -->
+    <script src="../../scripts/slideshow.js"></script>
+    <script src="../../scripts/tabs.js"></script>
+</body>
+</html>
