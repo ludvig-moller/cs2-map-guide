@@ -39,7 +39,7 @@
     border-width: 0;
     font-weight: 500;
     font-size: x-large;
-    color: white;
+    color: black;
     background-color: #B0CAD0;
 }
 
@@ -171,7 +171,7 @@
     min-width: 40px;
     border-width: 0;
     border-radius: 8px;
-    color: white;
+    color: black;
     background-color: #B0CAD0;
 }
 
@@ -196,4 +196,13 @@
         max-width: 100%;
         margin: 0;
     }
+}
+
+/* Setting aspect ratio of img and video element to improve CLS performance */
+img {
+    aspect-ratio: 16 / 9;
+}
+
+video {
+    aspect-ratio: 16 / 9;
 }
